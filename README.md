@@ -1,3 +1,9 @@
+# PSHA Heating & Air
+
+This project is a frontend-only web application for a heating and air business, built with React and Material UI. It provides a modern, responsive interface for customers to learn about services, request quotes, and contact the business.
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
