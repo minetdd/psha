@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <!-- Heart Shape -->
+    <path d="M60 105s-35-23.5-35-50.5C25 36 41 25 60 43c19-18 35-7 35 11.5C95 81.5 60 105 60 105z" fill="#fff" stroke="#1976d2" stroke-width="3"/>
+    <!-- Blue Arrow (Cooling) -->
+    <path d="M45 60 Q35 50 50 40" stroke="#1976d2" stroke-width="5" fill="none" marker-end="url(#arrowheadBlue)"/>
+    <marker id="arrowheadBlue" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#1976d2"/>
+    </marker>
+    <!-- Red Arrow (Heating) -->
+    <path d="M75 60 Q85 70 70 80" stroke="#d32f2f" stroke-width="5" fill="none" marker-end="url(#arrowheadRed)"/>
+    <marker id="arrowheadRed" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 4, 0 8" fill="#d32f2f"/>
+    </marker>
+  </g>
+</svg>
