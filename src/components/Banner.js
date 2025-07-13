@@ -18,7 +18,21 @@ const navItems = [
 const Banner = () => (
   <AppBar position="static" elevation={0} sx={{ background: 'transparent', boxShadow: 'none' }}>
     <Toolbar>
-      <img src={hvacLogo} alt="HVAC Logo" style={{ width: 40, height: 40, marginRight: 16 }} />
+      <img src={hvacLogo} alt="HVAC Logo" style={{ width: 40, height: 40, marginRight: 12 }} />
+      <Typography
+        variant="h4"
+        sx={{
+          fontWeight: 600,
+          marginRight: 2,
+          background: 'linear-gradient(90deg, #1976d2, #d32f2f)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text',
+          textFillColor: 'transparent',
+        }}
+      >
+        Preferred Services Heating & Air
+      </Typography>
       <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
         Preferred Services Heating & Air
       </Typography>

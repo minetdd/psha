@@ -2,9 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Banner from './components/Banner';
 import Container from '@mui/material/Container';
-import Home from './components/Home';
-import ComingSoon from './components/ComingSoon';
 import Slider from './components/Slider';
+import routes from './routes';
 import './styles/App.css';
 
 function App() {
@@ -14,11 +13,9 @@ function App() {
         <Banner />
         <Slider />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/service" element={<ComingSoon title="Service" />} />
-          <Route path="/bio" element={<ComingSoon title="Bio" />} />
-          <Route path="/about" element={<ComingSoon title="About" />} />
-          <Route path="/contact" element={<ComingSoon title="Contact Us" />} />
+          {routes.map(({ path, element }, idx) => (
+            <Route key={path || idx} path={path} element={element} />
+          ))}
         </Routes>
       </Container>
     </Router>
