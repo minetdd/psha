@@ -16,7 +16,7 @@ const navItems = [
 ];
 
 const Banner = () => (
-  <AppBar position="static" color="primary">
+  <AppBar position="static" elevation={0} sx={{ background: 'transparent', boxShadow: 'none' }}>
     <Toolbar>
       <img src={hvacLogo} alt="HVAC Logo" style={{ width: 40, height: 40, marginRight: 16 }} />
       <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
@@ -29,7 +29,7 @@ const Banner = () => (
             color="inherit"
             component={RouterLink}
             to={item.to}
-            sx={{ textTransform: 'none' }}
+            sx={{ textTransform: 'none', color: '#000' }}
           >
             {item.label}
           </Button>
