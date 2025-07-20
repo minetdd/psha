@@ -4,7 +4,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
-import hvacLogo from '../assets/hvac-logo.svg';
+import hvacLogo from '../assets/psha.png';
 import { Link as RouterLink } from 'react-router-dom';
 
 const navItems = [
@@ -18,7 +18,7 @@ const navItems = [
 const Banner = () => (
   <AppBar position="static" elevation={0} sx={{ background: 'transparent', boxShadow: 'none' }}>
     <Toolbar>
-      <img src={hvacLogo} alt="HVAC Logo" style={{ width: 40, height: 40, marginRight: 12 }} />
+      <img src={hvacLogo} alt="HVAC Logo" style={{ width: 70, height: 70, marginRight: 12 }} />
       <Typography
         variant="h4"
         sx={{
