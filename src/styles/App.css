@@ -1,9 +1,24 @@
 body {
-  background-image: url('../assets/pshaBg.png');
-  background-repeat: repeat-x;      /* Repeat horizontally */
-  background-size: auto 100vh;      /* Keep original width, stretch vertically */
-  background-position: top center;  /* Optional: center vertically */
+  position: relative;
   min-height: 100vh;
+  /* Remove background-image from body if using this method */
+  background: none;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../assets/pshaBg.png');
+  background-repeat: repeat-x;
+  background-size: 600px 100vh;      /* Each image keeps its width, fills height */
+  background-position: top center;
+  transform: scaleX(-1); /* This flips the image horizontally */
+  z-index: -1;
+  pointer-events: none;
 }
 
 .App {
