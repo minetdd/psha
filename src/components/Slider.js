@@ -19,10 +19,19 @@ const images = [
 ];
 
 const Slider = () => (
-  <Box sx={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', my: 4, pt: 0 }}>
+  <Box
+    sx={{
+      width: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      my: { xs: 2, md: 4 },
+      pt: 0,
+    }}
+  >
     <Swiper
       style={{ width: '100%' }}
-      spaceBetween={30}
+      spaceBetween={16}
       slidesPerView={1}
       loop
       modules={[Autoplay]}
@@ -30,8 +39,26 @@ const Slider = () => (
     >
       {images.map((src, idx) => (
         <SwiperSlide key={idx}>
-          <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: 300, bgcolor: '#f5f5f5', width: '100%' }}>
-            <img src={src} alt={`HVAC ${idx + 1}`} style={{ maxHeight: 280, width: '100%', objectFit: 'cover', borderRadius: 8 }} />
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              height: { xs: 180, sm: 220, md: 300 },
+              bgcolor: '#f5f5f5',
+              width: '100%',
+            }}
+          >
+            <img
+              src={src}
+              alt={`HVAC ${idx + 1}`}
+              style={{
+                maxHeight: '100%',
+                width: '100%',
+                objectFit: 'cover',
+                borderRadius: 8,
+              }}
+            />
           </Box>
         </SwiperSlide>
       ))}
