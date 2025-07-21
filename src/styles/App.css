@@ -1,3 +1,11 @@
+body {
+  background-image: url('../assets/pshaBg.png');
+  background-repeat: repeat-x;      /* Repeat horizontally */
+  background-size: auto 100vh;      /* Keep original width, stretch vertically */
+  background-position: top center;  /* Optional: center vertically */
+  min-height: 100vh;
+}
+
 .App {
   text-align: center;
 }

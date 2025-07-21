@@ -9,7 +9,20 @@ import './styles/App.css';
 function App() {
   return (
     <Router>
-      <Container maxWidth={false} className="App" sx={{ width: '90vw', minHeight: '90vh', margin: 'auto', flexGrow: 1, display: 'flex', flexDirection: 'column', p: 0, bgcolor: '#fff' }}>
+      <Container
+        maxWidth="lg"
+        className="App"
+        sx={{
+          minHeight: '100vh',      // Always fill the viewport vertically
+          width: '100%',           // Take full width up to maxWidth
+          margin: 'auto',          // Center the container
+          flexGrow: 1,
+          display: 'flex',
+          flexDirection: 'column',
+          p: 0,
+          bgcolor: '#fff',
+        }}
+      >
         <Banner />
         <Slider />
         <Routes>
