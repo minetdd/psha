@@ -5,6 +5,8 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMore from '@mui/icons-material/ExpandMore';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 const services = [
 	{
@@ -69,14 +71,28 @@ const services = [
 
 const Services = () => {
 	const [expanded, setExpanded] = useState(false);
+	const theme = useTheme();
+	const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
 	const handleChange = (panel) => (event, isExpanded) => {
 		setExpanded(isExpanded ? panel : false);
 	};
 
 	return (
-		<Container maxWidth="md" sx={{ mt: 6, mb: 6 }}>
-			<Typography variant="h3" align="center" gutterBottom>
+		<Container
+			maxWidth="md"
+			sx={{
+				mt: isMobile ? 2 : 6,
+				mb: isMobile ? 2 : 6,
+				px: isMobile ? 1 : 3,
+			}}
+		>
+			<Typography
+				variant={isMobile ? 'h5' : 'h3'}
+				align="center"
+				gutterBottom
+				sx={{ fontWeight: 600 }}
+			>
 				Our Services
 			</Typography>
 			{services.map((service, idx) => (
@@ -87,10 +103,16 @@ const Services = () => {
 					onChange={handleChange(idx)}
 				>
 					<AccordionSummary expandIcon={<ExpandMore />}>
-						<Typography variant="h6">{service.title}</Typography>
+						<Typography variant={isMobile ? 'subtitle1' : 'h6'}>
+							{service.title}
+						</Typography>
 					</AccordionSummary>
 					<AccordionDetails>
-						<Typography gutterBottom align="left">
+						<Typography
+							gutterBottom
+							align="left"
+							sx={{ fontSize: isMobile ? '1rem' : '1.1rem' }}
+						>
 							{service.description}
 						</Typography>
 						{service.bullets && (
@@ -103,7 +125,13 @@ const Services = () => {
 							>
 								{service.bullets.map((point, i) => (
 									<li key={i} style={{ textAlign: 'left' }}>
-										<Typography variant="body2" align="left">
+										<Typography
+											variant="body2"
+											align="left"
+											sx={{
+												fontSize: isMobile ? '0.95rem' : '1rem',
+											}}
+										>
 											{point}
 										</Typography>
 									</li>

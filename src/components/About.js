@@ -9,31 +9,51 @@ import {
   ListItemText,
   Rating
 } from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 const About = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   return (
-    <Box py={8} bgcolor="#f9f9f9">
-      <Container maxWidth="md">
-        <Typography variant="h4" component="h1" gutterBottom>
+    <Box py={isMobile ? 3 : 8} bgcolor="#f9f9f9">
+      <Container maxWidth="md" sx={{ px: isMobile ? 1 : 3 }}>
+        <Typography
+          variant={isMobile ? 'h5' : 'h4'}
+          component="h1"
+          gutterBottom
+          sx={{ textAlign: isMobile ? 'center' : 'left', fontWeight: 600 }}
+        >
           About Preferred Service Heating, Cooling & Air
         </Typography>
 
-        <Typography variant="body1" paragraph align="left">
+        <Typography
+          variant="body1"
+          paragraph
+          align={isMobile ? 'center' : 'left'}
+          sx={{ fontSize: isMobile ? '1rem' : '1.1rem' }}
+        >
           Preferred Service Heating, Cooling & Air is a small, family-owned HVAC company
           based in South Jordan, Utah—operating since 2003. We specialize in providing dependable heating,
           cooling, and air purification services for both residential and commercial clients.
         </Typography>
 
-        <Typography variant="body1" paragraph align="left">
+        <Typography
+          variant="body1"
+          paragraph
+          align={isMobile ? 'center' : 'left'}
+          sx={{ fontSize: isMobile ? '1rem' : '1.1rem' }}
+        >
           Preferred Service Heating, Cooling & Air Purity Inc. stands out in the South Jordan area as a trusted, 
           honest, and experienced local HVAC contractor. Their strong customer satisfaction stems from transparent 
           pricing, emergency services, and a no-pressure approach.
         </Typography>
 
-        <Divider sx={{ my: 4 }} />
+        <Divider sx={{ my: isMobile ? 2 : 4 }} />
 
         <Box display="flex" flexDirection="column" alignItems="center">
-          <Typography variant="h6" gutterBottom>
+          <Typography variant={isMobile ? 'subtitle1' : 'h6'} gutterBottom>
             📍 Location & Credentials
           </Typography>
           <List sx={{ width: '100%', maxWidth: 800 }}>
@@ -59,9 +79,9 @@ const About = () => {
             </ListItem>
           </List>
         </Box>
-        <Divider sx={{ my: 4 }} />
-        <Box sx={{ my: 4 }}>
-          <Typography variant="h6" gutterBottom>
+        <Divider sx={{ my: isMobile ? 2 : 4 }} />
+        <Box sx={{ my: isMobile ? 2 : 4 }}>
+          <Typography variant={isMobile ? 'subtitle1' : 'h6'} gutterBottom>
             Read our customer reviews on:
           </Typography>
           <Box
@@ -72,10 +92,10 @@ const About = () => {
               borderRadius: 2,
               boxShadow: 2,
               background: '#fff',
-              p: 2,
+              p: isMobile ? 1 : 2,
               textAlign: 'center',
             }}
-            >
+          >
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>
               <a
                 href="https://www.homeadvisor.com/rated.PreferredServiceHeating.14625265.html?utm_source=chatgpt.com"
