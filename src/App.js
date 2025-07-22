@@ -5,6 +5,9 @@ import Container from '@mui/material/Container';
 import Slider from './components/Slider';
 import routes from './routes';
 import './styles/App.css';
+import Footer from './components/Footer'; // Import the Footer component
+import Typography from '@mui/material/Typography'; // Import Typography
+import version from './version'; // Adjust path if needed
 
 function App() {
   return (
@@ -30,6 +33,11 @@ function App() {
             <Route key={path || idx} path={path} element={element} />
           ))}
         </Routes>
+        <Footer>
+          <Typography variant="caption" color="text.secondary">
+            Version {version}
+          </Typography>
+        </Footer>
       </Container>
     </Router>
   );
