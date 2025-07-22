@@ -1,14 +1,41 @@
-# PSHA Heating & Air
+# Preferred Service Heating, Cooling & Air
 
-This project is a frontend-only web application for a heating and air business, built with React and Material UI. It provides a modern, responsive interface for customers to learn about services, request quotes, and contact the business.
+This is a modern, responsive web application for Preferred Service Heating, Cooling & Air, a family-owned HVAC company based in South Jordan, Utah. The app is built with React and Material UI, providing customers with information about services, company credentials, contact options, and customer reviews.
 
 ---
 
-# Getting Started with Create React App
+## Features
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- **Responsive Design:** Works seamlessly on desktop and mobile devices.
+- **Service Listings:** Detailed descriptions of all HVAC services offered.
+- **About Section:** Company history, credentials, and hours of operation.
+- **Contact Form:** Customers can send messages directly via EmailJS.
+- **Customer Reviews:** Direct links to Google, Home Advisor, Angi, Yellow Pages, and Facebook reviews.
+- **Dynamic Versioning:** The app version is displayed in the footer and auto-updates with each release.
+- **Modern UI:** Built with Material UI and Swiper for a clean, interactive experience.
 
-## Available Scripts
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher recommended)
+- npm
+
+### Installation
+
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/minetdd/psha.git
+   cd psha
+   ```
+2. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+
+### Available Scripts
 
 In the project directory, you can run:
 
