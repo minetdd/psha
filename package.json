@@ -1,6 +1,6 @@
 {
   "name": "psha",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -28,7 +28,10 @@
     "release": "standard-version",
     "release:major": "standard-version --release-as major",
     "release:minor": "standard-version --release-as minor",
-    "release:patch": "standard-version --release-as patch"
+    "release:patch": "standard-version --release-as patch",
+    "bump:major": "npm run release:major && prebuild",
+    "bump:minor": "npm run release:minor && prebuild",
+    "bump:patch": "npm run release:patch && prebuild"
   },
   "eslintConfig": {
     "extends": [

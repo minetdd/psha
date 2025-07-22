@@ -51,7 +51,24 @@ const About = () => {
         </Typography>
 
         <Divider sx={{ my: isMobile ? 2 : 4 }} />
-
+        <Box display="flex" flexDirection="column" alignItems="center" sx={{ mb: isMobile ? 2 : 4 }}>
+          <Typography variant={isMobile ? 'subtitle1' : 'h6'} gutterBottom>
+            🕒 Hours of Operation
+          </Typography>
+          <List sx={{ width: '100%', maxWidth: 800 }}>
+            <ListItem>
+              <ListItemText
+                primary={<span><strong>Monday – Friday:</strong> 8:00 AM – 5:00 PM</span>}
+              />
+            </ListItem>
+            <ListItem>
+              <ListItemText
+                primary={<span><strong>Emergency Service:</strong> Available 24 hours a day</span>}
+              />
+            </ListItem>
+          </List>
+        </Box>
+        <Divider sx={{ my: isMobile ? 2 : 4 }} />
         <Box display="flex" flexDirection="column" alignItems="center">
           <Typography variant={isMobile ? 'subtitle1' : 'h6'} gutterBottom>
             📍 Location & Credentials
@@ -75,24 +92,6 @@ const About = () => {
             <ListItem>
               <ListItemText
                 primary={<span><strong>Licensing:</strong> Holds Utah HVAC Qualifier license (#5378066‑5501)</span>}
-              />
-            </ListItem>
-          </List>
-        </Box>
-        <Divider sx={{ my: isMobile ? 2 : 4 }} />
-        <Box display="flex" flexDirection="column" alignItems="center" sx={{ mb: isMobile ? 2 : 4 }}>
-          <Typography variant={isMobile ? 'subtitle1' : 'h6'} gutterBottom>
-            🕒 Hours of Operation
-          </Typography>
-          <List sx={{ width: '100%', maxWidth: 800 }}>
-            <ListItem>
-              <ListItemText
-                primary={<span><strong>Monday – Friday:</strong> 8:00 AM – 5:00 PM</span>}
-              />
-            </ListItem>
-            <ListItem>
-              <ListItemText
-                primary={<span><strong>Emergency Service:</strong> Available 24 hours a day</span>}
               />
             </ListItem>
           </List>
