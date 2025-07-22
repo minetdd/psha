@@ -121,8 +121,8 @@ const About = () => {
                 style={{ textDecoration: 'none', color: '#4285F4', fontWeight: 500, display: 'flex', alignItems: 'center', gap: 8 }}
               >
                 Google Reviews
-                <Rating value={5} precision={0.1} readOnly size="small" sx={{ ml: 1 }} />
-                <span style={{ fontSize: 12, color: '#888' }}>(~4.8/5)</span>
+                <Rating value={5.0} precision={0.1} readOnly size="small" sx={{ ml: 1 }} />
+                <span style={{ fontSize: 12, color: '#888' }}>(5/5)</span>
               </a>
               <a
                 href="https://www.homeadvisor.com/rated.PreferredServiceHeating.14625265.html?utm_source=chatgpt.com"
