@@ -80,6 +80,24 @@ const About = () => {
           </List>
         </Box>
         <Divider sx={{ my: isMobile ? 2 : 4 }} />
+        <Box display="flex" flexDirection="column" alignItems="center" sx={{ mb: isMobile ? 2 : 4 }}>
+          <Typography variant={isMobile ? 'subtitle1' : 'h6'} gutterBottom>
+            🕒 Hours of Operation
+          </Typography>
+          <List sx={{ width: '100%', maxWidth: 800 }}>
+            <ListItem>
+              <ListItemText
+                primary={<span><strong>Monday – Friday:</strong> 8:00 AM – 5:00 PM</span>}
+              />
+            </ListItem>
+            <ListItem>
+              <ListItemText
+                primary={<span><strong>Emergency Service:</strong> Available 24 hours a day</span>}
+              />
+            </ListItem>
+          </List>
+        </Box>
+        <Divider sx={{ my: isMobile ? 2 : 4 }} />
         <Box sx={{ my: isMobile ? 2 : 4 }}>
           <Typography variant={isMobile ? 'subtitle1' : 'h6'} gutterBottom>
             Read our customer reviews on:
@@ -97,6 +115,16 @@ const About = () => {
             }}
           >
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>
+              <a
+                href="https://share.google/nVSXrytTMLnavENPo"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: 'none', color: '#4285F4', fontWeight: 500, display: 'flex', alignItems: 'center', gap: 8 }}
+              >
+                Google Reviews
+                <Rating value={5} precision={0.1} readOnly size="small" sx={{ ml: 1 }} />
+                <span style={{ fontSize: 12, color: '#888' }}>(~4.8/5)</span>
+              </a>
               <a
                 href="https://www.homeadvisor.com/rated.PreferredServiceHeating.14625265.html?utm_source=chatgpt.com"
                 target="_blank"
@@ -136,6 +164,8 @@ const About = () => {
             </Box>
           </Box>
         </Box>
+
+        <Divider sx={{ my: isMobile ? 2 : 4 }} />
       </Container>
     </Box>
   );
