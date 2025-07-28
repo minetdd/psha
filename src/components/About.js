@@ -11,6 +11,10 @@ import {
 } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import GoogleIcon from '@mui/icons-material/Google';
+import HomeIcon from '@mui/icons-material/Home';
+import MenuBook from '@mui/icons-material/MenuBook'; // For Yellow Pages
 
 const About = () => {
   const theme = useTheme();
@@ -76,7 +80,7 @@ const About = () => {
           <List sx={{ width: '100%', maxWidth: 800 }}>
             <ListItem>
               <ListItemText
-                primary={<span><strong>Address:</strong> 11664 S Jordan Farms Rd, South Jordan, UT 84095</span>}
+                primary={<span><strong>Address:</strong> South Jordan, UT 84095</span>} // 11664 S Jordan Farms Rd, 
               />
             </ListItem>
             <ListItem>
@@ -120,6 +124,7 @@ const About = () => {
                 rel="noopener noreferrer"
                 style={{ textDecoration: 'none', color: '#4285F4', fontWeight: 500, display: 'flex', alignItems: 'center', gap: 8 }}
               >
+                <GoogleIcon sx={{ color: '#4285F4' }} />
                 Google Reviews
                 <Rating value={5.0} precision={0.1} readOnly size="small" sx={{ ml: 1 }} />
                 <span style={{ fontSize: 12, color: '#888' }}>(5/5)</span>
@@ -130,6 +135,7 @@ const About = () => {
                 rel="noopener noreferrer"
                 style={{ textDecoration: 'none', color: '#F6830F', fontWeight: 500, display: 'flex', alignItems: 'center', gap: 8 }}
               >
+                <HomeIcon sx={{ color: '#F6830F' }} />
                 Home Advisor
                 <Rating value={4.8} precision={0.1} readOnly size="small" sx={{ ml: 1 }} />
                 <span style={{ fontSize: 12, color: '#888' }}>(~4.8/5)</span>
@@ -138,8 +144,9 @@ const About = () => {
                 href="https://www.yellowpages.com/south-jordan-ut/mip/preferred-service-heating-cooling-19376943"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ textDecoration: 'none', color: '#FFD400', fontWeight: 500, display: 'flex', alignItems: 'center', gap: 8 }}
+                style={{ textDecoration: 'none', color: '#FFC107', fontWeight: 500, display: 'flex', alignItems: 'center', gap: 8 }}
               >
+                <MenuBook sx={{ color: '#FFC107' }} />
                 Yellow Pages
               </a>
               <a
@@ -148,6 +155,7 @@ const About = () => {
                 rel="noopener noreferrer"
                 style={{ textDecoration: 'none', color: '#1A7B60', fontWeight: 500, display: 'flex', alignItems: 'center', gap: 8 }}
               >
+                <HomeIcon sx={{ color: '#1A7B60' }} />
                 Angi
                 <Rating value={4.8} precision={0.1} readOnly size="small" sx={{ ml: 1 }} />
                 <span style={{ fontSize: 12, color: '#888' }}>(4.8/5)</span>
@@ -158,6 +166,7 @@ const About = () => {
                 rel="noopener noreferrer"
                 style={{ textDecoration: 'none', color: '#1877F3', fontWeight: 500, display: 'flex', alignItems: 'center', gap: 8 }}
               >
+                <FacebookIcon sx={{ color: '#1877F3' }} />
                 Facebook
               </a>
             </Box>
