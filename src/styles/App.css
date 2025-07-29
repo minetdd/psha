@@ -3,6 +3,7 @@ body {
   min-height: 100vh;
   /* Remove background-image from body if using this method */
   background: none;
+  font-family: 'Montserrat', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
 body::before {
