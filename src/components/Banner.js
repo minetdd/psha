@@ -39,7 +39,7 @@ const Banner = () => {
         const { latitude, longitude } = position.coords;
         // TODO: Need to replace with WEATHER_API_KEY from .env file eventually. use this prompt. How would I update my application to be serverless?
         fetch(
-          `http://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=${latitude},${longitude}&aqi=no`
+          `https://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=${latitude},${longitude}&aqi=no`
         )
           .then((res) => res.json())
           .then((data) => {
